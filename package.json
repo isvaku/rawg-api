@@ -1,6 +1,6 @@
 {
 	"name": "rawg-api",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "JavaScript API wrapper for RAWG.io",
 	"keywords": [
 		"RAWG",
@@ -36,7 +36,7 @@
 		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
 		"test": "vitest run",
 		"dev": "vitest",
-		"local-release": "changesets version && changeset publish",
+		"local-release": "changeset version && changeset publish",
 		"prepublishOnly": "npm run ci"
 	},
 	"main": "dist/index.js"
