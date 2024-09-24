@@ -22,14 +22,19 @@
 	"type": "module",
 	"license": "Apache-2.0",
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.16.4",
 		"prettier": "^3.3.3",
-		"typescript": "^5.6.2"
+		"typescript": "^5.6.2",
+		"vitest": "^2.1.1"
 	},
 	"scripts": {
 		"build": "tsc",
-		"ci": "pnpm run build && pnpm run check-format",
+		"ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test",
 		"format": "prettier --write .",
 		"check-format": "prettier --check .",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	}
+		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+		"test": "vitest run",
+		"dev": "vitest"
+	},
+	"main": "dist/index.js"
 }
