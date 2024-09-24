@@ -1,43 +1,43 @@
 {
-	"name": "rawg-api",
-	"version": "0.1.1",
-	"description": "JavaScript API wrapper for RAWG.io",
-	"keywords": [
-		"RAWG",
-		"API",
-		"typescript"
-	],
-	"homepage": "https://github.com/isvaku/rawg-api",
-	"bugs": {
-		"url": "https://github.com/isvaku/rawg-api/issues"
-	},
-	"author": "Matt Pocock <team@totaltypescript.com> (https://totaltypescript.com)",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/isvaku/rawg-api.git"
-	},
-	"files": [
-		"dist"
-	],
-	"type": "module",
-	"license": "Apache-2.0",
-	"devDependencies": {
-		"@arethetypeswrong/cli": "^0.16.4",
-		"@changesets/cli": "^2.27.8",
-		"prettier": "^3.3.3",
-		"typescript": "^5.6.2",
-		"vitest": "^2.1.1"
-	},
-	"scripts": {
-		"build": "tsc",
-		"ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test",
-		"format": "prettier --write .",
-		"check-format": "prettier --check .",
-		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-		"test": "vitest run",
-		"dev": "vitest",
-		"local-release": "changeset version && changeset publish",
-		"prepublishOnly": "npm run ci"
-	},
-	"main": "dist/index.js"
+  "name": "rawg-api",
+  "version": "0.1.1",
+  "description": "JavaScript API wrapper for RAWG.io",
+  "keywords": [
+    "RAWG",
+    "API",
+    "typescript"
+  ],
+  "homepage": "https://github.com/isvaku/rawg-api",
+  "bugs": {
+    "url": "https://github.com/isvaku/rawg-api/issues"
+  },
+  "author": "Matt Pocock <team@totaltypescript.com> (https://totaltypescript.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isvaku/rawg-api.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
+    "@changesets/cli": "^2.27.8",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run",
+    "dev": "vitest",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci"
+  },
+  "main": "dist/index.js"
 }
